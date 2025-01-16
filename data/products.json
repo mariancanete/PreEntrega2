@@ -1,0 +1,15 @@
+[
+  {
+    "id": "69db97d4-982e-409d-8131-efd6af98788a",
+    "title": "Cerveza IPA",
+    "description": "Cerveza artesanal IPA",
+    "code": "IPA123",
+    "price": 350,
+    "stock": 100,
+    "category": "Bebidas",
+    "thumbnails": [
+      "img/ipa.jpg"
+    ],
+    "status": true
+  }
+]
