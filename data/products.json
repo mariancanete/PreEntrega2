@@ -1,14 +1,131 @@
 [
   {
-    "id": "69db97d4-982e-409d-8131-efd6af98788a",
-    "title": "Cerveza IPA",
-    "description": "Cerveza artesanal IPA",
-    "code": "IPA123",
-    "price": 350,
-    "stock": 100,
-    "category": "Bebidas",
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "title": "Smartphone XYZ",
+    "description": "Smartphone de última generación con cámara de 108MP",
+    "code": "XYZ123",
+    "price": 150000,
+    "stock": 50,
+    "category": "Electrónica",
     "thumbnails": [
-      "img/ipa.jpg"
+      "img/smartphone.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-bcde-234567890abc",
+    "title": "Auriculares Inalámbricos",
+    "description": "Auriculares Bluetooth con cancelación de ruido",
+    "code": "BT456",
+    "price": 25000,
+    "stock": 80,
+    "category": "Electrónica",
+    "thumbnails": [
+      "img/auriculares.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": "c3d4e5f6-a789-0123-cdef-34567890abcd",
+    "title": "Notebook Gamer",
+    "description": "Notebook con procesador i7 y GPU RTX 3060",
+    "code": "GAMER789",
+    "price": 750000,
+    "stock": 20,
+    "category": "Electrónica",
+    "thumbnails": [
+      "img/notebook.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": "d4e5f6a7-8901-2345-def6-4567890abcde",
+    "title": "Zapatillas Running",
+    "description": "Zapatillas deportivas para correr con suela antideslizante",
+    "code": "RUN2024",
+    "price": 40000,
+    "stock": 60,
+    "category": "Ropa",
+    "thumbnails": [
+      "img/zapatillas.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": "e5f6a789-0123-4567-ef01-567890abcdef",
+    "title": "Campera de Invierno",
+    "description": "Campera térmica impermeable con capucha",
+    "code": "CAMP2024",
+    "price": 55000,
+    "stock": 40,
+    "category": "Ropa",
+    "thumbnails": [
+      "img/campera.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": "f6a78901-2345-6789-0123-67890abcdefg",
+    "title": "Jeans Slim Fit",
+    "description": "Jeans de corte ajustado en tela denim premium",
+    "code": "JEAN999",
+    "price": 32000,
+    "stock": 70,
+    "category": "Ropa",
+    "thumbnails": [
+      "img/jeans.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": "a7890123-4567-8901-2345-7890abcdefgh",
+    "title": "Sillón Reclinable",
+    "description": "Sillón ergonómico reclinable con tapizado de cuero",
+    "code": "SILLON123",
+    "price": 120000,
+    "stock": 15,
+    "category": "Hogar",
+    "thumbnails": [
+      "img/sillon.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": "b8901234-5678-9012-3456-890abcdefghi",
+    "title": "Cafetera Espresso",
+    "description": "Cafetera automática con espumador de leche",
+    "code": "CAFE456",
+    "price": 65000,
+    "stock": 25,
+    "category": "Hogar",
+    "thumbnails": [
+      "img/cafetera.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": "c9012345-6789-0123-4567-901abcdefghj",
+    "title": "Aspiradora Robot",
+    "description": "Aspiradora inteligente con mapeo de habitaciones",
+    "code": "ROBOT789",
+    "price": 180000,
+    "stock": 30,
+    "category": "Hogar",
+    "thumbnails": [
+      "img/aspiradora.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": "d0123456-7890-1234-5678-012abcdefghk",
+    "title": "Lámpara LED Inteligente",
+    "description": "Lámpara regulable con control por voz y app móvil",
+    "code": "LED2024",
+    "price": 12000,
+    "stock": 90,
+    "category": "Hogar",
+    "thumbnails": [
+      "img/lampara.jpg"
     ],
     "status": true
   }

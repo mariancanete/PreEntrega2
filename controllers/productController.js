@@ -1,5 +1,6 @@
 const Product = require('../models/Product');
 
+// Obtener productos
 const getProducts = async (req, res) => {
   try {
     const { limit = 10, page = 1, sort, query } = req.query;
@@ -43,6 +44,20 @@ const getProducts = async (req, res) => {
   }
 };
 
+// Obtener detalle de un producto
+const getProductById = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id); // Buscar producto por ID
+    if (!product) {
+      return res.status(404).send('Producto no encontrado');
+    }
+    res.render('product', { product }); // Pasar el producto a la vista product.handlebars
+  } catch (error) {
+    res.status(500).send('Error al obtener el producto');
+  }
+};
+
 module.exports = {
   getProducts,
+  getProductById,
 };
