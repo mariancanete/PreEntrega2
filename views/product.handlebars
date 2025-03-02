@@ -8,20 +8,21 @@
 </head>
 <body>
   <div class="container mt-5">
-    <h1 class="text-center">{{title}}</h1>
+    <h1 class="text-center">{{product.title}}</h1>
     <div class="card">
       <div class="card-body">
-        <p class="card-text">{{description}}</p>
-        <p class="card-text"><strong>Precio:</strong> ${{price}}</p>
-        <p class="card-text"><strong>Categoría:</strong> {{category}}</p>
-        <p class="card-text"><strong>Stock:</strong> {{stock}}</p>
-        <button class="btn btn-success" onclick="addToCart('{{_id}}')">Agregar al carrito</button>
+        <p class="card-text">{{product.description}}</p>
+        <p class="card-text"><strong>Precio:</strong> ${{product.price}}</p>
+        <p class="card-text"><strong>Categoría:</strong> {{product.category}}</p>
+        <p class="card-text"><strong>Stock:</strong> {{product.stock}}</p>
+        <button class="btn btn-success" onclick="addToCart('{{id}}')">Agregar al carrito</button>
         <a href="/products" class="btn btn-primary">Volver a la lista</a>
       </div>
     </div>
   </div>
 
   <script>
+
     // Función para agregar un producto al carrito
     async function addToCart(productId) {
       try {

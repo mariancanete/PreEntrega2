@@ -1,13 +1,41 @@
 const express = require('express');
 const Cart = require('../models/Cart');
-
+const Product = require('../models/Product');
 const router = express.Router();
+
+router.post('/:cid/products/:pid', async (req, res) => {
+  try {
+    const { cid, pid } = req.params;
+    const cart = await Cart.findOne({id: cid});
+    if (!cart) {
+      return res.status(404).json({ status: 'error', message: 'Carrito no encontrado' });
+    }
+    const dbProduct = await Product.findOne({_id: pid});
+    if (!dbProduct) {
+      return res.status(404).json({ status: 'error', message: 'Producto no encontrado' });
+    }
+
+    const existingProductIndex = cart.products.findIndex(
+      item => item.product.toString() === pid
+    );
+
+    if (existingProductIndex !== -1) {
+      cart.products[existingProductIndex].quantity += 1;
+    } else {
+      cart.products.push({ product: pid, quantity: 1 });
+    }
+    await Cart.updateOne({id: cid}, {products: cart.products});
+    res.status(200).json({ status: 'success', payload: cart });
+  } catch (error) {
+    res.status(500).json({ status: 'error', message: error.message });
+  }
+})
 
 // Eliminar un producto específico del carrito
 router.delete('/:cid/products/:pid', async (req, res) => {
   try {
     const { cid, pid } = req.params;
-    const cart = await Cart.findById(cid);
+    const cart = await Cart.find(cid);
     if (!cart) {
       return res.status(404).json({ status: 'error', message: 'Carrito no encontrado' });
     }

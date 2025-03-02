@@ -5,6 +5,7 @@ const connectDB = async () => {
     await mongoose.connect('mongodb+srv://admin:coder@cluster0.pkbv9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      dbName : 'ecommerce'
     });
     console.log('MongoDB connected successfully');
   } catch (error) {

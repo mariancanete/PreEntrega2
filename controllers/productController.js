@@ -47,7 +47,7 @@ const getProducts = async (req, res) => {
 // Obtener detalle de un producto
 const getProductById = async (req, res) => {
   try {
-    const product = await Product.findById(req.params.id); // Buscar producto por ID
+    const product = await Product.findOne({_id: req.params.id}).lean(); // Buscar producto por ID
     if (!product) {
       return res.status(404).send('Producto no encontrado');
     }

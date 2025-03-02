@@ -14,6 +14,7 @@ connectDB();
 // Configurar middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Configurar Handlebars
 app.engine('handlebars', handlebars.engine());
@@ -21,12 +22,12 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 // Rutas
-app.use('/products', productRouter); // Cambié esta línea para usar directamente la ruta de productos
+app.use('/products', productRouter);
 app.use('/api/carts', cartRouter);
 
 // Ruta raíz
 app.get('/', (req, res) => {
-  res.redirect('/products');  // Redirigir a la ruta /products
+  res.redirect('/products');
 });
 
 // Iniciar el servidor
